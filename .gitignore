@@ -54,8 +54,7 @@ dkms.conf
 # debug information files
 *.dwo
 
-# backup files
-backups/
+
 
 #data files
 *.csv
