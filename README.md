@@ -1,3 +1,4 @@
+![Version](https://img.shields.io/badge/version-v1.2.0-blue)
 # Production Incident Generator
 
 A Linux production troubleshooting laboratory built with Bash.
@@ -30,3 +31,7 @@ A Linux production troubleshooting laboratory built with Bash.
 ./verify_lab.sh
 ./reset_lab.sh
 ```
+
+## Releases
+
+- **v1.2.0** — Initial public release with Incidents 001–008.
