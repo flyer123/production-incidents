@@ -30,3 +30,11 @@ repair
 validate_fix
 ↓
 restore
+
+## Optional hooks
+
+Plugins may additionally implement:
+
+```bash
+incident_precheck()
+incident_cleanup()

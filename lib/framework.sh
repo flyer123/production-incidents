@@ -4,6 +4,17 @@ run_incident() {
 
 	log "Starting incident lifecycle"
 
+	info "Running precheck..."
+
+	if ! run_optional_hook incident_precheck
+	then
+		fail "Precheck failed."
+		log "Incident precheck failed"
+		return 1
+	fi
+
+	log "Precheck complete"
+
 	info "Backing up..."
 
 	incident_backup
@@ -80,6 +91,15 @@ validate_repair() {
 	then
 
 		ok "Repair verified."
+
+		if ! run_optional_hook incident_cleanup
+		then
+			warn "Cleanup hook failed."
+			log "Incident cleanup failed"
+			return 1
+		fi
+
+		log "Incident cleanup complete"
 
 		return 0
 

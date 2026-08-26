@@ -35,3 +35,4 @@ A Linux production troubleshooting laboratory built with Bash.
 ## Releases
 
 - **v1.2.0** — Initial public release with Incidents 001–008.
+- **v1.2.1** — Added optional plugin lifecycle hooks.

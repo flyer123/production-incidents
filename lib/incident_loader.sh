@@ -32,3 +32,13 @@ validate_plugin() {
     done
 }
 
+run_optional_hook() {
+
+	local FUNC="$1"
+
+	if declare -F "$FUNC" >/dev/null
+	then
+		"$FUNC"
+	fi
+
+}
